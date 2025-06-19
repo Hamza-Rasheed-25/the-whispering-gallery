@@ -17,7 +17,7 @@ let currentPhrase = '';
 let currentWhisper = '';
 let score = 0;
 let round = 0;
-let maxRounds = 10;
+let maxRounds = 5;
 
 const phraseDisplay = document.getElementById('phrase-display');
 const userInput = document.getElementById('user-input');
@@ -77,6 +77,8 @@ function showFinalResult() {
     feedback.innerHTML = `<strong>Game Over!</strong><br>Your score: ${score} / ${maxRounds}`;
     userInput.disabled = true;
     submitBtn.disabled = true;
+    userInput.style.display = 'none';
+    submitBtn.style.display = 'none';
     // Add restart button if not present
     if (!document.getElementById('restart-btn')) {
         const restartBtn = document.createElement('button');
@@ -93,6 +95,8 @@ function restartGame() {
     round = 0;
     userInput.disabled = false;
     submitBtn.disabled = false;
+    userInput.style.display = 'block';
+    submitBtn.style.display = 'block';
     nextRound();
     feedback.textContent = '';
     const restartBtn = document.getElementById('restart-btn');
