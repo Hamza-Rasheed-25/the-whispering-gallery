@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+#game-container:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.28);
+}
+
+#game-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: #3a7bd5;
+    letter-spacing: 1px;
+}
+
+#phrase-display {
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+    color: #222;
+    min-height: 2.2em;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+#user-input {
+    width: 90%;
+    padding: 0.6em 0.8em;
+    font-size: 1rem;
+    border: 1.5px solid #a1c4fd;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    outline: none;
+    transition: border 0.2s;
+}
+#user-input:focus {
+    border: 1.5px solid #3a7bd5;
+}
+
+#submit-btn, #restart-btn {
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6em 1.5em;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+}
+#submit-btn:active, #restart-btn:active {
+    transform: scale(0.97);
+}
+#submit-btn:disabled, #restart-btn:disabled {
+    background: #b2bec3;
+    cursor: not-allowed;
+}
+
+#feedback {
+    min-height: 2.2em;
+    font-size: 1.1rem;
+    margin-top: 0.5em;
+    color: #222;
+    font-weight: 500;
+}
+#feedback strong {
+    color: #3a7bd5;
+    font-size: 1.2em;
+}
